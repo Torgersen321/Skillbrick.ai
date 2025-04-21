@@ -2,32 +2,36 @@
 
 ## Active Task
 
-[Task description]
+- **Task #2: Design Database Schema**
+  - **Subtask #2.1: Create User Table Migration** (Adapting to use Supabase `auth.users` + `profiles` table)
 
 ## Background
 
-[Relevant background information]
+- Completed Task #1: Setup Project Repository and Environment (Frontend: Vite/React/TS, Backend: Express/TS, CI: GitHub Actions basic setup, DB: Supabase via MCP).
+- Generated PRD content (`PRD_Skillbrickv1.txt`, although file might be deleted from workspace view).
+- Updated `README.md` and attempted update for `project_brief.md`.
 
 ## Current Focus
 
-[What I'm working on right now]
+- Preparing database schema migrations for Supabase.
+- Generated SQL for the `profiles` table (linked to `auth.users`).
 
 ## Next Steps
 
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
+1.  **User Action:** Manually apply the generated SQL migration for the `profiles` table to Supabase project `bsfnsbmpyopbyeptuhyc` (due to MCP auth issues).
+2.  Mark subtask 2.1 as done.
+3.  Proceed to Subtask 2.2: Create ContentItem Table Migration.
 
 ## Open Questions
 
-- [Question 1]
-- [Question 2]
+- How to resolve MCP authorization issues for direct Supabase actions (migrations, listing projects)?
 
 ## Recent Changes
 
-- [Change 1] - 2025-04-21 06:01:34
-- [Change 2] - 2025-04-21 06:01:34
+- Completed Task #1 and subtasks.
+- Started Task #2.
+- Generated SQL for `profiles` table migration.
 
-## Mode: THINK
+## Mode: IMPLEMENT
 
 Last Updated: 2025-04-21 06:01:34
