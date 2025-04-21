@@ -1,0 +1,251 @@
+{
+  "meta": {
+    "generatedAt": "2025-04-21T16:09:10.881Z",
+    "tasksAnalyzed": 30,
+    "thresholdScore": 6,
+    "projectName": "Your Project Name",
+    "usedResearch": true
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 1,
+      "taskTitle": "Setup Project Repository and Environment",
+      "complexityScore": 7,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "List and describe the steps to set up a full-stack project repository, including frontend and backend initialization, tooling configuration, database setup, CI/CD, and documentation.",
+      "reasoning": "This task covers multiple domains (frontend, backend, tooling, CI/CD, documentation) and requires careful sequencing and integration, making it moderately complex."
+    },
+    {
+      "taskId": 2,
+      "taskTitle": "Design Database Schema",
+      "complexityScore": 8,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the steps required to design and implement a relational database schema, including migrations, constraints, indexing, and documentation.",
+      "reasoning": "Designing a schema with correct relationships, indexing, and documentation is critical and challenging, especially with multiple entities and constraints."
+    },
+    {
+      "taskId": 3,
+      "taskTitle": "Implement User Authentication System",
+      "complexityScore": 9,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Identify all steps necessary for secure user authentication, including registration, login, password hashing, JWT handling, rate limiting, and secure cookie management.",
+      "reasoning": "Security, multiple endpoints, middleware, and state management make authentication highly complex and sensitive to implementation errors."
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "Create User Profile Management",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Detail the steps needed to implement user profile viewing, editing, validation, authentication checks, and account deletion or deactivation.",
+      "reasoning": "Involves form handling, validation, security, and user experience concerns; complexity is moderate due to these intersecting factors."
+    },
+    {
+      "taskId": 5,
+      "taskTitle": "Design and Implement Core UI Components",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "List all key UI components to be created, including their states, accessibility requirements, styling systems, and documentation strategies.",
+      "reasoning": "Building a reusable, accessible, and well-documented component library with consistent design is challenging and foundational."
+    },
+    {
+      "taskId": 6,
+      "taskTitle": "Implement Learning Path Creation",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the process for modeling, creating, validating, listing, and securing user-created learning paths, including UI and API elements.",
+      "reasoning": "Touch points between backend models, API, and frontend UI make this moderately complex."
+    },
+    {
+      "taskId": 7,
+      "taskTitle": "Implement Learning Brick Base Structure",
+      "complexityScore": 8,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Describe the steps for designing base interfaces, implementing data models, CRUD APIs, and frontend rendering architecture for bricks.",
+      "reasoning": "Establishes extensible architecture and data models, requiring careful design for future scalability and maintainability."
+    },
+    {
+      "taskId": 8,
+      "taskTitle": "Implement Textbook Brick",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the implementation of the Textbook brick, covering content rendering, text-to-speech integration, UI controls, and progress tracking.",
+      "reasoning": "Combines UI, API integration, and user-interaction tracking, but is more focused than a full system."
+    },
+    {
+      "taskId": 9,
+      "taskTitle": "Implement Socratic Brick",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "List the core steps for implementing an AI-driven Socratic dialogue, including UI, API integration, context management, prompting, and validation.",
+      "reasoning": "Requires real-time AI integration, context tracking, and a dynamic user interface, making it more complex."
+    },
+    {
+      "taskId": 10,
+      "taskTitle": "Implement Feynman Brick",
+      "complexityScore": 8,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Identify the main steps for building the Feynman brick, including UI for explanations, AI feedback integration, submission handling, and completion logic.",
+      "reasoning": "Complex due to AI feedback, UI design for input, and robust completion criteria."
+    },
+    {
+      "taskId": 11,
+      "taskTitle": "Implement Q&A Brick",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the implementation of Q&A functionality, including question display, answer submission, AI evaluation, feedback generation, and scoring.",
+      "reasoning": "Involves multiple question types, AI integration, answer validation, and scoring, increasing complexity."
+    },
+    {
+      "taskId": 12,
+      "taskTitle": "Implement Learning Path Visualization",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "List the main steps to visually represent learning paths, including sequencing, status indication, interactivity, and responsive design.",
+      "reasoning": "Requires stateful, interactive, and visually clear components, but is constrained in scope."
+    },
+    {
+      "taskId": 13,
+      "taskTitle": "Implement Brick Addition to Paths",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Describe the process for allowing users to browse, select, configure, and add bricks to learning paths, including UI, validation, and API updates.",
+      "reasoning": "Complexity arises from flexible UI, validation, API interactions, and real-time path updating."
+    },
+    {
+      "taskId": 14,
+      "taskTitle": "Implement Brick Reordering in Paths",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Detail the steps for enabling brick reordering, including drag-and-drop UI, alternative controls, persistence, and visual feedback.",
+      "reasoning": "Requires interactive UI, accessibility considerations, and reliable state syncing."
+    },
+    {
+      "taskId": 15,
+      "taskTitle": "Implement Learning Path Progress Tracking",
+      "complexityScore": 8,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the implementation of progress tracking, including data models, calculation logic, API endpoints, and UI components.",
+      "reasoning": "Combines backend, API, and frontend changes with real-time or near-real-time updates."
+    },
+    {
+      "taskId": 16,
+      "taskTitle": "Implement User Dashboard",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "List the main steps for building a user dashboard, including layout design, data retrieval, filtering, statistics, and responsive UI.",
+      "reasoning": "Integrates data from multiple parts of the system and needs both breadth and depth in UI/UX."
+    },
+    {
+      "taskId": 17,
+      "taskTitle": "Implement Knowledge State Tracking System",
+      "complexityScore": 9,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Identify and describe the steps required for tracking, updating, and persisting user knowledge state, including event listeners and efficient DB operations.",
+      "reasoning": "Requires efficient real-time or near-real-time data updates, correct modeling, and close integration with user interaction flows."
+    },
+    {
+      "taskId": 18,
+      "taskTitle": "Implement Leveling System",
+      "complexityScore": 8,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the creation of a leveling system, including data models, progression logic, eligibility calculation, UI, and notifications.",
+      "reasoning": "Involves calculating progression, updating user state, and ensuring correct business logic."
+    },
+    {
+      "taskId": 19,
+      "taskTitle": "Design and Implement Level Cards",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "List the steps for designing and implementing level cards, focusing on metrics display, progress bars, actions, tooltips, and responsiveness.",
+      "reasoning": "Focused UI task with moderate complexity, requiring attention to design specifications and interactivity."
+    },
+    {
+      "taskId": 20,
+      "taskTitle": "Integrate Gemini 2.5 API for AI Interactions",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Detail the steps for integrating an external AI API, including service setup, authentication, prompt engineering, context management, and monitoring.",
+      "reasoning": "Complex external integration, security, error handling, and performance/cost monitoring required."
+    },
+    {
+      "taskId": 21,
+      "taskTitle": "Implement Text-to-Speech Integration",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Identify the steps for implementing TTS, including solution selection, service integration, UI controls, and browser compatibility checks.",
+      "reasoning": "Well-defined integration task with some implementation and compatibility challenges."
+    },
+    {
+      "taskId": 22,
+      "taskTitle": "Implement Brick Completion Logic",
+      "complexityScore": 8,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the implementation of completion logic for each brick type, including criteria definition, tracking, API updates, and UI indicators.",
+      "reasoning": "Must standardize and coordinate logic across several brick implementations, requiring careful design."
+    },
+    {
+      "taskId": 23,
+      "taskTitle": "Implement Path Start/Resume Functionality",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "List the steps for implementing start/resume functionality for learning paths, including state management, APIs, UI, and navigation.",
+      "reasoning": "Requires seamless user experience across stateful, multi-step flows."
+    },
+    {
+      "taskId": 24,
+      "taskTitle": "Implement Detailed Brick Metrics Tracking",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Describe the process for collecting, storing, retrieving, and displaying detailed brick interaction metrics.",
+      "reasoning": "Involves event tracking, data modeling, and optional visualization."
+    },
+    {
+      "taskId": 25,
+      "taskTitle": "Implement AI Context Preservation",
+      "complexityScore": 8,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the implementation of AI context storage, retrieval, pruning, and restoration across sessions and bricks.",
+      "reasoning": "Managing session-level context for AI is essential for quality and requires careful state management."
+    },
+    {
+      "taskId": 26,
+      "taskTitle": "Implement Error Handling and Logging",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "List the main steps for establishing error handling and logging, including middleware, client components, log levels, and monitoring.",
+      "reasoning": "Centralized error handling and structured logging are critical for maintainability and debugging."
+    },
+    {
+      "taskId": 27,
+      "taskTitle": "Implement Security Measures",
+      "complexityScore": 9,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Detail the steps for implementing comprehensive security, including HTTPS, CSRF, input validation, CORS, secure headers, and audit logging.",
+      "reasoning": "Requires addressing many security vectors and must be robust and up to industry standards."
+    },
+    {
+      "taskId": 28,
+      "taskTitle": "Implement Performance Optimization",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Identify and describe the key areas for performance optimization, including caching, query optimization, lazy loading, and monitoring.",
+      "reasoning": "Performance improvements span backend, frontend, and external API usage."
+    },
+    {
+      "taskId": 29,
+      "taskTitle": "Implement Responsive Design",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "List the key steps for ensuring responsive design, covering layouts, navigation, input controls, and media optimization.",
+      "reasoning": "Primarily frontend-focused with challenges around device compatibility and user experience."
+    },
+    {
+      "taskId": 30,
+      "taskTitle": "Create Comprehensive Documentation",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down documentation into user guides, API docs, technical/system architecture, developer guides, and schema documentation.",
+      "reasoning": "Comprehensive documentation requires contributions from multiple areas and must be thorough and accessible."
+    }
+  ]
+}

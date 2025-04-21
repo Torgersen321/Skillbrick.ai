@@ -1,0 +1,408 @@
+**Product Requirements Document: SkillBrick AI Learning Platform**
+
+**1. Introduction**
+
+**1.1 Overview**
+SkillBrick is envisioned as an adaptive, AI-powered learning platform designed to offer highly personalized educational journeys. The core concept revolves around users constructing their learning paths by combining various interactive modules, referred to as "learning bricks." Each brick represents a distinct learning methodology (e.g., consuming textbook content with integrated text-to-speech, engaging in a Socratic discussion with an AI tutor, applying the Feynman technique for concept explanation, or answering targeted questions in a Q&A format). The platform leverages Artificial Intelligence (AI) extensively to provide continuous, contextual feedback, meticulously track user progress across different defined knowledge levels, and dynamically adapt the learning experience based on individual performance patterns and stated preferences. This ensures a responsive, engaging, and ultimately more effective learning process tailored to each user.
+
+**1.2 Purpose of this document**
+This document meticulously outlines the product requirements for the initial Minimum Viable Product (MVP) release of the SkillBrick AI Learning Platform. It serves to define the project's strategic goals, identify the target audience, detail the core features and functionalities, specify both functional and non-functional requirements, and enumerate comprehensive user stories with corresponding acceptance criteria. This PRD acts as the primary, authoritative guide for the design, development, engineering, and quality assurance teams, fostering alignment and ensuring a unified, shared understanding of the product vision and execution plan throughout the development lifecycle.
+
+**1.3 Goals and objectives**
+*   **Primary Goal:** To create a deeply engaging and highly effective personalized learning experience that dynamically adapts to individual user needs, learning styles, and progress through customizable learning paths and rich AI interaction.
+*   **Objective 1 (Modular Learning):** Develop and implement a foundational system of modular "learning bricks" representing diverse learning techniques (specifically Textbook/TTS, Socratic Dialogue, Feynman Explanation, and Q&A) for the initial MVP release.
+*   **Objective 2 (AI Personalization):** Implement robust AI-driven personalization capabilities to accurately track user progress within and across bricks, adapt content difficulty and interaction styles dynamically, and provide timely, relevant feedback within the context of each learning brick.
+*   **Objective 3 (User Customization):** Enable users to easily customize their individual learning paths by selecting, sequencing, and arranging different learning bricks based on their specific learning goals, prior knowledge, and current understanding.
+*   **Objective 4 (Progression System):** Establish and implement a clear, multi-level progression system (e.g., Beginner, Intermediate, Advanced) that accurately reflects user mastery of the subject matter and provides guidance for their ongoing learning journey.
+*   **Objective 5 (User Experience):** Ensure a seamless, intuitive, and highly interactive user experience across all platform components, particularly within the various learning bricks, to maintain engagement and minimize friction.
+*   **Objective 6 (Data Security):** Securely and reliably manage all user data, including personal information, learning progress, interaction history, and generated content, adhering to best practices for data privacy and security.
+
+**1.4 Target audience**
+The primary target audience for the SkillBrick platform includes:
+*   **Self-directed learners:** Individuals across various age groups and backgrounds seeking flexible, effective, and personalized methods to acquire new knowledge or skills in diverse domains, independent of formal institutions.
+*   **Students (Higher Education/Lifelong Learning):** Learners enrolled in formal education programs or engaged in continuous learning who are looking for supplementary tools to deepen their understanding of complex subjects, reinforce concepts, and explore topics beyond traditional classroom methods.
+*   **Professionals:** Individuals in the workforce aiming to upskill, reskill, or stay current in their fields efficiently, requiring tailored learning paths that accommodate specific career goals, knowledge gaps, and time constraints.
+
+**1.5 Monetization Model (Initial)**
+The initial version will likely operate under a Freemium model, designed to encourage adoption while providing a path to revenue:
+*   **Core (Free Tier):** Offers foundational access, potentially including limited daily usage of certain bricks or content, basic progress tracking metrics, and access to a subset of learning materials.
+*   **Pro (Paid Tier):** Provides premium benefits such as unlimited content access across all bricks and subjects, advanced analytics on learning patterns and progress, potentially early access to new features, and consideration for future capabilities like offline access or mobile synchronization. The platform's modular content and feature architecture is designed explicitly to support this tiered access model.
+
+**2. Features**
+
+**2.1 Core concept: Learning bricks**
+The platform's fundamental architectural and pedagogical unit is the "Learning Brick." Each brick is designed as a self-contained, reusable module focused on delivering a specific learning methodology or interaction type.
+*   **Brick Types (Initial MVP Set):**
+    *   **Textbook Brick:** Presents textual learning content (e.g., chapters, articles, documents). Must include integrated Text-to-Speech (TTS) functionality with basic controls.
+    *   **Socratic Brick:** Facilitates learning through an AI-driven, interactive questioning and discussion process, designed to mimic a Socratic dialogue and encourage critical thinking.
+    *   **Feynman Brick:** Guides the user through the process of explaining a concept in their own simple terms, thereby identifying knowledge gaps. AI can potentially provide feedback on the explanation's clarity and accuracy.
+    *   **Q&A Brick:** Presents targeted questions related to the subject matter (potentially multiple-choice, short answer, fill-in-the-blank, etc.) and utilizes AI to provide immediate feedback, hints, or explanations.
+*   **Brick Customization:** Users should have the ability to adjust relevant parameters within certain bricks where applicable (e.g., controlling TTS playback speed, setting the desired depth or focus of Socratic questioning).
+*   **Modularity:** Bricks must be designed architecturally to be easily added, removed, updated, or reordered within a learning path without breaking the overall structure or user experience.
+
+**2.2 Learning path customization**
+Users must possess the agency to create, manage, and adapt their own learning journeys according to their needs.
+*   **Path Creation:** Provide a clear interface for users to initiate the creation of a new learning path, typically by selecting a subject or defining a learning goal. Users can then assemble a sequence of available learning bricks to form the initial path structure.
+*   **Path Visualization:** Offer a clear, intuitive visual representation of the user's chosen learning path, showing the sequence of bricks, their types, and potentially their status (e.g., completed, in progress, not started).
+*   **Path Modification:** Enable users to easily modify their existing learning paths by adding new bricks, removing existing ones, or reordering the sequence of bricks to better suit their evolving understanding or goals.
+*   **Suggested Paths (Future Consideration):** While not required for MVP, the system should be designed with the potential to later offer template paths for common goals or AI-suggested path structures based on user profiles, goals, or performance analysis.
+
+**2.3 AI integration and interaction**
+AI capabilities are fundamental to the platform's value proposition, enabling adaptivity, personalization, and interactivity.
+*   **Contextual Awareness:** The underlying AI models must maintain persistent context regarding the user's progress, estimated knowledge state, current position within a specific learning path, and interaction history within individual bricks.
+*   **Interactive Feedback:** The AI must provide real-time, contextually relevant feedback within the interactive bricks (e.g., evaluating user explanations in the Feynman brick, guiding the conversation effectively in the Socratic brick, providing tailored hints or explanations in the Q&A brick).
+*   **Adaptive Difficulty:** The system must dynamically adjust the complexity, depth, or nature of content and AI interactions within bricks based on the user's ongoing performance, their defined learning level, and potentially their stated preferences.
+*   **Personalization Engine:** An underlying AI engine analyzes user interactions, performance metrics, and progress data across all bricks and paths to inform future content recommendations, path suggestions (future), and dynamic adaptations within the learning experience.
+
+**2.4 Progress tracking and personalization**
+The platform must meticulously track user progress and interactions to personalize the experience effectively and provide meaningful insights.
+*   **Brick-Level Tracking:** Monitor and store completion status, time spent, interaction data, and performance metrics specific to each instance of a brick within a user's path.
+*   **Path-Level Tracking:** Aggregate progress across all bricks within a defined learning path to provide an overall status and measure advancement towards the path's goal.
+*   **Knowledge State:** Maintain an internal, dynamic representation of the user's estimated understanding of the subject matter, continuously updated based on interactions and performance across all relevant bricks. *(See Section 4.4.2.1 for Data Schema)*
+*   **History and Review:** Allow users to easily access and view their past activity, performance data, completed paths, and interaction history.
+
+    **2.4.1 Detailed Brick Metrics**
+    Specific, granular metrics will be tracked within each brick type to provide data for the personalization engine, progress reports, and level advancement calculations:
+
+    *   **Video / Lecture:**
+        *   *Core:* Time watched (seconds), Percentage of content watched, Key play events (pause, seek counts/locations).
+        *   *Extra:* User-preferred playback speed, Engagement heat-map across video timeline.
+    *   **Reading / Article:**
+        *   *Core:* Maximum scroll depth reached, Total dwell time on content.
+        *   *Extra:* Frequency/content of highlighted excerpts, Count of glossary term look-ups.
+    *   **Quiz / Practice:**
+        *   *Core:* Number of attempts per question, Correct/incorrect status per attempt, Number/type of hints used.
+        *   *Extra:* Response latency per question, Analysis of chosen distractors (for MCQs).
+    *   **Coding / Project (If implemented):**
+        *   *Core:* Build/test pass/fail status, Lines of code edited / number of files touched.
+        *   *Extra:* Number/type of linter warnings generated, Code runtime/performance metrics.
+    *   **Flashcard / SRS (If implemented):**
+        *   *Core:* User-reported ease factor (e.g., SM-2 algorithm), Calculated recall interval (days).
+        *   *Extra:* Self-rated confidence level per card review.
+    *   **Simulation / Lab (If implemented):**
+        *   *Core:* Number of required steps successfully completed, Total count of errors encountered.
+        *   *Extra:* Time spent in distinct phases of the simulation, Frequency of simulation resets.
+
+    *General Tracking Rule:* For all brick types, consistently log completion status, measures of correctness or accuracy where applicable, and time spent on task. Supplement these core metrics with 1-2 additional domain-specific signals that significantly enhance personalization capabilities (e.g., 'hints used' in mathematical problem-solving bricks, 'pronunciation score' in language learning bricks).
+
+**2.5 Leveling system**
+A structured system is required to represent user mastery within a subject domain and guide their progression through increasingly complex material.
+*   **Defined Levels:** Establish clear, distinct learning levels (e.g., Beginner, Intermediate, Advanced, Expert) for subject matter domains. *(Specific content domains TBD, see Section 7)*
+*   **Adaptive Content:** Ensure that the content presented and the difficulty of AI interactions within bricks align appropriately with the user's currently assessed level for the path's topic.
+
+    **2.5.1 Progression Metrics (Per Level)**
+    User progression from one level to the next is determined by achieving specific, predefined target thresholds across a combination of the following metrics, measured *within the current level*:
+    *   `studyTimeMin`: Cumulative total minutes spent actively engaging with learning material associated with the current level.
+    *   `modulesCompleted`: Total count of distinct learning modules (these could be predefined sequences of bricks or significant standalone bricks) successfully completed within the current level.
+    *   `recallRatePct`: Average percentage success rate across all spaced-repetition reviews conducted for material learned within the current level (applicable if SRS features are implemented).
+    *   `variationsLearned`: Total count of unique concepts, facts, skills, or problem variations successfully mastered within the current level.
+    *   `reviewsCompleted`: Total number of Spaced Repetition System (SRS) review sessions completed for material associated with the current level (applicable if SRS features are implemented).
+    *   `oneWeekRetentionPct`: Average recall rate specifically on SRS reviews conducted 7 or more days after the initial learning event for material within the current level.
+    *   `consecutiveDaysStudied`: Current continuous streak of days where the user has engaged in meaningful study activity on the platform.
+
+    **2.5.2 Level Thresholds**
+    The following table defines the specific target thresholds that must be met or exceeded for *all seven metrics simultaneously* to unlock advancement to the subsequent level:
+
+    | Level Advancement | studyTimeMin ≥ | modulesCompleted ≥ | recallRatePct ≥ | variationsLearned ≥ | reviewsCompleted ≥ | oneWeekRetentionPct ≥ | consecutiveDaysStudied ≥ |
+    | :---------------- | :------------- | :----------------- | :-------------- | :------------------ | :----------------- | :-------------------- | :----------------------- |
+    | **Level 1 → 2**   | 60             | 5                  | 60              | 30                  | 20                 | 65                    | 3                        |
+    | **Level 2 → 3**   | 180            | 12                 | 70              | 75                  | 50                 | 70                    | 5                        |
+    | **Level 3 → 4**   | 360            | 25                 | 80              | 150                 | 100                | 75                    | 7                        |
+    | **Level 4 → 5**   | 600            | 50                 | 90              | 300                 | 200                | 80                    | 10                       |
+    *(Note: RecallRatePct, ReviewsCompleted, and OneWeekRetentionPct are dependent on SRS implementation)*
+
+    **2.5.3 Progression Logic Implementation**
+    The system must continuously evaluate the user's progress against the thresholds for their current level after relevant activities (e.g., completing a brick, finishing a study session).
+    *   A function `can_advance(currentUserProgress, currentLevel)` checks if `currentUserProgress[metric] >= LEVEL_THRESHOLDS[currentLevel][metric]` for all defined metrics.
+    *   If `can_advance` returns `true`, the UI element enabling level advancement (e.g., an "Advance" button) becomes active.
+    *   If `can_advance` returns `false`, the advancement UI element remains disabled. A tooltip or similar mechanism (`buildTooltip(currentUserProgress, thresholds)`) should be available on the disabled element, listing *only* the specific metrics that are still below their target thresholds and their current/target values (e.g., "Missing: Study Time: 45/60 min; Consecutive Days: 2/3").
+    *   When the user clicks the enabled "Advance" button:
+        1.  Increment the user's `currentLevel` variable.
+        2.  Reset all seven `UserProgress` metric counters associated with leveling back to zero to begin tracking for the new level.
+        3.  Trigger a brief, non-intrusive UI confirmation or celebration (e.g., a small confetti animation, a confirmation message).
+
+    **2.5.4 Leveling System User Interface Components**
+    The user interface must provide clear visibility into the leveling system and the user's progress:
+    *   **Dashboard Organization:** The user dashboard should allow filtering or viewing of learning paths/levels based on status (Active, Completed, All). Sorting options (e.g., by % Complete, Next Review Due, Recently Learned) and potentially a search/filter box should be available.
+    *   **Level Card (Per Level):** A distinct visual card or section should represent each level the user is engaged with (or has completed). This card should display:
+        *   **Title:** Clearly indicating the level number and potentially a descriptive name (e.g., "Level 2 – Specialist").
+        *   **Icon/Badge:** A visual element representing the level achievement.
+        *   **Metrics Grid:** A clear layout (e.g., 2x4 or 4x2) showing each of the seven progression metrics. Each metric should display its label, the user's "current / target" numerical values, and a horizontal progress bar visually representing the fraction of the target achieved (fill = current/target).
+        *   **Action Buttons:**
+            *   `[Review]`: (If SRS is implemented) Initiates an SRS review session specifically for items associated with this level.
+            *   `[Learn]`: Directs the user to the next recommended learning module or activity within this level's curriculum.
+            *   `[Advance ▶]`: This button is visually distinct and disabled by default. It becomes enabled *only* when the `can_advance` logic returns true for this level. As mentioned, a tooltip on the disabled state clarifies unmet requirements.
+
+**2.6 User accounts and authentication**
+Secure user accounts are necessary to save progress, maintain personalization, and manage user data.
+*   **Registration:** Provide a straightforward mechanism for new users to sign up for an account, minimally requiring an email address and a secure password. Consider OAuth options (Google, etc.) for future convenience.
+*   **Login/Logout:** Implement a secure and reliable authentication mechanism for users to log in and log out of their accounts.
+*   **Password Management:** Include essential password management features, such as a secure password reset ("Forgot Password?") functionality.
+*   **Profile:** Provide a basic user profile section where users can manage account settings (e.g., change password, update email).
+
+**3. User Stories and Acceptance Criteria**
+
+**3.1 Learner scenarios**
+
+*   **US-001: User Registration**
+    *   **As a** new user,
+    *   **I want** to be able to register for an account using my email address and a password,
+    *   **So that** I can save my learning progress and access personalized features.
+    *   **Acceptance Criteria:**
+        *   Registration form includes fields for email and password (with confirmation).
+        *   Password strength requirements (e.g., length, complexity) are clearly communicated and enforced client-side and server-side.
+        *   Successful registration creates a unique user account in the database.
+        *   A clear error message is displayed if the provided email address is already registered.
+        *   Clear error messages are displayed if passwords do not match or fail to meet strength requirements.
+
+*   **US-002: User Login**
+    *   **As a** registered user,
+    *   **I want** to log in to my account using my email and password,
+    *   **So that** I can access my saved learning paths and continue my progress.
+    *   **Acceptance Criteria:**
+        *   Login form includes fields for email and password.
+        *   Successful authentication redirects the user to their personalized dashboard or last known application state.
+        *   A clear, non-specific error message (to avoid user enumeration) is displayed for invalid email/password combinations.
+        *   A visible link or button initiates the password recovery ("Forgot Password?") flow.
+
+*   **US-003: Create Learning Path**
+    *   **As a** logged-in user,
+    *   **I want** to create a new learning path for a specific subject or topic,
+    *   **So that** I can define my learning goals and structure my learning sequence.
+    *   **Acceptance Criteria:**
+        *   User can clearly initiate the creation of a new learning path (e.g., via a button).
+        *   User can assign a descriptive name or identify the topic for the new path.
+        *   Upon creation, the user is presented with the available learning brick types to add to the path.
+        *   The newly created, initially empty path is saved and associated with the user's account.
+
+*   **US-004: Add Bricks to Path**
+    *   **As a** logged-in user editing a learning path,
+    *   **I want** to select and add different types of learning bricks (Textbook, Socratic, Feynman, Q&A) to my path in a specific order,
+    *   **So that** I can customize my learning sequence using the available methodologies.
+    *   **Acceptance Criteria:**
+        *   User can easily browse or select from the available MVP brick types.
+        *   User can select one or multiple bricks to add to the currently edited path.
+        *   Bricks are added to the path visually, maintaining the intended sequence (e.g., appended to the end, or allowing insertion at a specific point).
+        *   The updated path structure (sequence of brick IDs/types) is saved persistently.
+        *   User interface allows adding the same type of brick multiple times within a single path if desired.
+
+*   **US-005: Reorder Bricks in Path**
+    *   **As a** logged-in user viewing my learning path,
+    *   **I want** to easily change the order of the bricks within that path,
+    *   **So that** I can adjust the learning flow based on my preferences or changing needs.
+    *   **Acceptance Criteria:**
+        *   The visual representation of the learning path supports reordering (e.g., via drag-and-drop, up/down arrows, or a dedicated edit mode).
+        *   Changes made to the brick order are saved immediately or upon explicit confirmation (e.g., "Save Path" button).
+        *   The user interface clearly and accurately reflects the new sequence of bricks after reordering.
+
+*   **US-006: Start/Resume Learning Path**
+    *   **As a** logged-in user,
+    *   **I want** to start a new learning path or resume an existing one,
+    *   **So that** I can begin learning or seamlessly continue from where I previously left off.
+    *   **Acceptance Criteria:**
+        *   User can select a specific path from their list of saved or in-progress paths.
+        *   Selecting a path opens the first incomplete brick in the defined sequence.
+        *   If resuming a path, the system directs the user to the start of the last active brick, or ideally, to the specific point within that brick where they stopped (requires fine-grained state saving within bricks).
+
+*   **US-007: Interact with Textbook Brick**
+    *   **As a** learner engaging with a Textbook brick,
+    *   **I want** to read the presented textual content and optionally use the integrated text-to-speech (TTS) feature,
+    *   **So that** I can consume the learning material in my preferred format (reading or listening).
+    *   **Acceptance Criteria:**
+        *   Textual content is displayed clearly and legibly.
+        *   TTS controls (play, pause, stop, playback speed adjustment) are clearly visible and functional.
+        *   The brick correctly marks itself as complete (or updates progress metrics like reading percentage) based on user action (e.g., clicking "Mark Complete") or reaching the end of the content.
+        *   Basic navigation within the text content (scrolling, potentially pagination for long texts) is smooth and intuitive.
+
+*   **US-008: Interact with Socratic Brick**
+    *   **As a** learner engaging with a Socratic brick,
+    *   **I want** to participate in an AI-driven Socratic discussion related to the path's topic,
+    *   **So that** I can deepen my understanding, uncover assumptions, and enhance critical thinking through guided questioning.
+    *   **Acceptance Criteria:**
+        *   The AI initiates a relevant discussion based on the learning path's topic and the user's current estimated knowledge state and level.
+        *   User can easily input text responses to the AI's questions or prompts.
+        *   AI responses are contextually relevant, coherent, and primarily aim to guide understanding through further questioning rather than direct answers.
+        *   The AI adapts the difficulty, depth, or focus of the discussion based on the user's responses and their assessed learning level.
+        *   A clear mechanism exists for the user or the AI to conclude the discussion and mark the brick as complete.
+
+*   **US-009: Interact with Feynman Brick**
+    *   **As a** learner engaging with a Feynman brick,
+    *   **I want** to attempt to explain a specific concept related to the path's topic in simple terms, potentially receiving AI feedback on my explanation,
+    *   **So that** I can actively test my own understanding, identify knowledge gaps, and practice articulation.
+    *   **Acceptance Criteria:**
+        *   The brick clearly prompts the user to explain a specific concept relevant to the current learning context.
+        *   A text input area is provided for the user to type their explanation.
+        *   Upon submission, the AI provides constructive feedback on the clarity, accuracy, and simplicity of the user's explanation, or guides the user towards improving it. (Feedback mechanism TBD - scoring, textual critique, etc.)
+        *   The brick marks itself as complete based on user submission, potentially requiring multiple attempts or reaching a certain feedback threshold.
+
+*   **US-010: Interact with Q&A Brick**
+    *   **As a** learner engaging with a Q&A brick,
+    *   **I want** to answer questions related to the learning topic and receive immediate feedback,
+    *   **So that** I can test my recall, check my comprehension, and reinforce learning.
+    *   **Acceptance Criteria:**
+        *   Questions relevant to the path's topic and the user's current learning level are presented (e.g., Multiple Choice Questions (MCQs), short answer, fill-in-the-blank).
+        *   User can clearly submit their answer(s).
+        *   Immediate feedback is provided, indicating correctness (correct/incorrect) and optionally offering explanations or hints generated by the AI.
+        *   Performance metrics (e.g., score, number correct/incorrect) are tracked for this brick interaction.
+        *   The brick marks itself as complete after a predefined set of questions is answered, or based on user action (e.g., "Finish Quiz").
+
+*   **US-011: View Progress**
+    *   **As a** logged-in user,
+    *   **I want** to view my progress within a specific learning path and see my overall assessed level for that topic,
+    *   **So that** I can understand my learning status, track my advancement, and identify areas needing attention.
+    *   **Acceptance Criteria:**
+        *   User interface clearly indicates the status of each brick within a selected path (e.g., complete, in progress, not started) using visual cues (icons, color-coding).
+        *   A clear indicator shows the user's current assessed learning level (e.g., Beginner, Intermediate) for the topic associated with the path.
+        *   An overall progress metric for the path (e.g., percentage complete, number of bricks completed/total) is prominently displayed.
+
+*   **US-012: Level Progression**
+    *   **As a** learner actively engaging with the platform,
+    *   **I want** the system to automatically assess my performance and engagement across various bricks and advance my learning level (e.g., from Beginner to Intermediate) when I demonstrably meet the required criteria,
+    *   **So that** the content difficulty and interaction complexity adapt appropriately to my growing knowledge and skills.
+    *   **Acceptance Criteria:**
+        *   The system continuously evaluates user performance data and engagement metrics from completed bricks against the defined level thresholds (see Section 2.5.2).
+        *   Meeting or exceeding all thresholds for the current level triggers a level-up event.
+        *   The user receives a clear notification of their level advancement.
+        *   Subsequent bricks encountered or interactions within the same path automatically adjust to reflect the difficulty and expectations of the new level.
+
+*   **US-013: AI Context Preservation**
+    *   **As a** learner moving between different bricks within a path, or returning after a break,
+    *   **I want** the AI interacting with me to remember my previous interactions, demonstrated knowledge, and overall progress state,
+    *   **So that** the learning experience feels continuous, personalized, and avoids redundant explanations or overly simplistic questions.
+    *   **Acceptance Criteria:**
+        *   Information learned, concepts mastered, or difficulties encountered in one brick demonstrably influence the AI's interactions (questions asked, feedback given, difficulty level) in subsequent bricks within the same path.
+        *   Resuming a learning path after logging out and back in successfully restores the context from the previous session (based on saved `USER_KNOWLEDGE_STATE`).
+        *   The AI actively avoids asking basic questions or presenting introductory information on topics the user has already demonstrated mastery of (based on the tracked knowledge state).
+
+*   **US-014: Secure Access and Data Handling**
+    *   **As a** user of the platform,
+    *   **I want** my account information (including email, password hash) and all my learning progress data to be stored securely and handled privately,
+    *   **So that** my personal data is protected from unauthorized access or breaches.
+    *   **Acceptance Criteria:**
+        *   User passwords are not stored in plaintext; they are securely hashed using a modern, strong hashing algorithm with unique salts per user.
+        *   All communication between the client (browser) and the server uses HTTPS encryption.
+        *   User progress data is strictly associated only with the authenticated user account and cannot be accessed by other users.
+        *   Backend systems implement appropriate measures to mitigate common web security vulnerabilities (e.g., Cross-Site Scripting (XSS), Cross-Site Request Forgery (CSRF), SQL Injection).
+        *   Compliance with relevant data privacy regulations (e.g., GDPR, CCPA, depending on target markets) is considered in data handling procedures.
+
+**3.2 (Potential) Admin/Content creator scenarios**
+*(Note: These roles are potential future additions, not strictly required for the initial MVP, but included for architectural consideration).*
+*   **US-101: Manage Brick Templates (Admin/Content Creator)**
+    *   As an administrator or designated content creator,
+    *   I want to be able to define, configure, and manage the available types of learning bricks and their default settings or templates,
+    *   So that platform users have a standardized and curated set of tools to build their learning paths.
+*   **US-102: Manage Content (Admin/Content Creator)**
+    *   As an administrator or designated content creator,
+    *   I want to be able to add, update, categorize, and manage the specific learning content used within content-heavy bricks like Textbook and Q&A,
+    *   So that the platform offers relevant, accurate, and up-to-date educational material across various subjects.
+
+**4. Design and User Experience**
+
+**4.1 General principles**
+*   **Intuitive Interface:** The user interface (UI) must be clean, uncluttered, and easy to navigate, requiring a minimal learning curve for new users. Core actions should be readily discoverable.
+*   **Interactivity:** Maximize user engagement by making interactions within bricks dynamic, responsive, and providing timely feedback. Avoid passive consumption where possible.
+*   **Visual Clarity:** Clearly and aesthetically represent learning paths, user progress, brick types, levels, and key information using consistent visual language.
+*   **Accessibility:** Strive to adhere to Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards where feasible to ensure usability for individuals with disabilities.
+*   **Consistency:** Maintain consistent design language, terminology, and interaction patterns across all sections of the platform, including the different brick types, dashboard, and settings.
+
+**4.2 Brick interface design**
+While each brick type necessitates a UI tailored to its specific function (e.g., a text reader with TTS controls, a chat-like interface for Socratic dialogue, a form for Q&A), common navigational elements (e.g., "Next Brick," "Previous Brick," "Back to Path," progress indicators) should be consistently placed and styled across all bricks for predictability.
+
+**4.3 Learning path visualization**
+Provide a clear, potentially graphical (e.g., a sequence of connected blocks), representation of the user's selected bricks within their learning path. This visualization must clearly show the sequence, the type of each brick, and its current completion status (Not Started, In Progress, Completed). The user's current position within the path should be highlighted.
+
+**4.4 Technical Architecture**
+
+    **4.4.1 Core AI Model Provider**
+    The primary AI model provider for powering the interactive elements within the learning bricks (Socratic dialogue generation, Feynman explanation feedback, Q&A hint generation and evaluation) will be **Google**. Specifically, the platform will integrate with the **`gemini-2.5`** model family via its API. The selection of specific model versions or tiers within the Gemini family (e.g., optimizing for cost, latency, or specific capabilities) may be refined based on performance testing and requirements for each distinct brick type.
+
+    **4.4.2 Data Model**
+
+        **4.4.2.1 User Knowledge State Schema**
+        The following Entity-Relationship Diagram (ERD) outlines the proposed schema for tracking the user's knowledge state concerning individual content items or concepts within the platform.
+
+        ```erDiagram
+            USER ||--o{ USER_KNOWLEDGE_STATE : tracks
+            CONTENT_ITEM ||--o{ USER_KNOWLEDGE_STATE : assesses
+
+            CONTENT_ITEM {
+                string  id PK              // Unique identifier for the content item (e.g., a specific concept, a question, a paragraph)
+                string  brick_type       // Type of brick this content item is associated with (e.g., "textbook", "socratic_prompt", "qa_question")
+                string  domain           // Broad subject area (e.g., "Algebra", "Python Basics") - Specific domains TBD
+                string  topic_hierarchy  // Optional structured path, e.g., "Algebra > Linear Equations > Solving for X"
+                float   intrinsic_difficulty // Estimated baseline difficulty of this item (0–1 scale)
+            }
+
+            USER {
+                string  id  PK              // Unique user identifier
+                string  email             // User's email address (unique)
+                string  password_hash     // Securely hashed password
+                datetime created_at       // Timestamp of account creation
+                integer currentLevel      // Current learning level (overall or per-domain TBD)
+                // Other potential fields: name, profile_picture_url, subscription_status
+            }
+
+            USER_KNOWLEDGE_STATE {
+                string  user_id      FK -> USER.id    // Foreign key to USER table
+                string  content_id   FK -> CONTENT_ITEM.id // Foreign key to CONTENT_ITEM table
+                float   mastery_estimate     // Current estimated mastery of this content item (0–1)
+                float   memory_strength      // Estimated strength of memory trace for this item (0–1, decays over time)
+                integer exposure_count       // Total number of times the user has encountered this item
+                integer correct_count        // Number of times the user interaction was deemed 'correct' or successful
+                datetime last_interaction_at // Timestamp of the most recent interaction with this item
+                datetime next_review_due_at  // Calculated timestamp for the next optimal review (for SRS)
+                PRIMARY KEY (user_id, content_id) // Composite primary key
+            }
+        ```
+        *Schema Purpose:* This structure allows tracking both short-term proficiency (`mastery_estimate`) and longer-term retention signals (`memory_strength`) for each specific piece of content relative to each user. It captures raw interaction counts (`exposure_count`, `correct_count`) for analysis and adaptation, and uses timestamps (`last_interaction_at`, `next_review_due_at`) to manage recency effects and drive potential spaced repetition schedules.
+
+        **4.4.2.2 Personalization Logic (Simplified Flow)**
+        The core loop for updating the user's knowledge state after a meaningful interaction (e.g., answering a question, submitting a Feynman explanation, completing a Socratic dialogue turn) with a specific `CONTENT_ITEM` should follow these steps:
+        1.  **Retrieve State:** Fetch the existing `USER_KNOWLEDGE_STATE` record for the given `user_id` and `content_id`. If none exists, create a new record with default initial values.
+        2.  **Update Counts:** Increment the `exposure_count`. If the interaction was evaluated as correct or successful, increment the `correct_count`.
+        3.  **Update Mastery:** Recalculate the `mastery_estimate` based on the interaction outcome, previous estimate, and potentially item difficulty (e.g., using Bayesian methods like Bayesian Knowledge Tracing (BKT), Item Response Theory (IRT), or a well-defined heuristic).
+        4.  **Update Memory:** Recalculate the `memory_strength` based on the interaction outcome, previous strength, and time elapsed since the last interaction (e.g., using principles from spaced repetition algorithms like SM-2 or a custom decay/reinforcement function).
+        5.  **Schedule Review:** Calculate and update the `next_review_due_at` timestamp based on the new `memory_strength` (longer interval for stronger memory).
+        6.  **Timestamp:** Update the `last_interaction_at` to the current time.
+        7.  **Save State:** Persist the updated `USER_KNOWLEDGE_STATE` record to the database.
+
+**5. Non-Functional Requirements**
+
+**5.1 Performance**
+*   **AI Response Time:** Responses from AI within interactive bricks (Socratic dialogue turns, Feynman feedback, Q&A hints/evaluations) should ideally be delivered to the user within 2-3 seconds under normal load to maintain engagement and flow.
+*   **UI Load Times:** Key pages such as the user dashboard, learning path visualizations, and brick loading times should generally be under 2 seconds.
+*   **TTS Latency:** Text-to-Speech generation should initiate playback promptly (e.g., within 1-2 seconds) after the user triggers it.
+
+**5.2 Scalability**
+*   The underlying infrastructure and application architecture must be designed to handle a growing user base and increasing numbers of concurrent sessions without significant degradation in performance or responsiveness. This includes considerations for database scaling, stateless application servers, and efficient AI API usage.
+*   The system architecture should easily accommodate the addition of new brick types, new subject domains, and expanded content libraries in future iterations without requiring major re-engineering.
+
+**5.3 Security**
+*   All user data, particularly Personally Identifiable Information (PII) and detailed learning progress, must be handled with strict security protocols (as detailed in US-014: secure hashing, HTTPS, access controls).
+*   Regular security audits, penetration testing, and vulnerability assessments should be incorporated into the development and maintenance lifecycle.
+*   Software dependencies (libraries, frameworks) must be actively monitored and kept up-to-date to promptly patch known security vulnerabilities.
+
+**5.4 Usability**
+*   The platform must be fully functional and render correctly across the latest versions of common modern web browsers (e.g., Chrome, Firefox, Safari, Edge).
+*   While the initial focus is on desktop web usability, responsive design principles should be considered to ensure adequate usability on various screen sizes, including tablets and potentially mobile browsers, even if dedicated mobile apps are not part of the MVP.
+
+**5.5 Reliability**
+*   The platform should strive for high availability, targeting an uptime of at least 99.5%.
+*   User progress data is critical and must be reliably saved to persistent storage with appropriate backup and recovery mechanisms in place to prevent data loss.
+
+**6. Future Considerations**
+While focusing on the MVP defined above, the following areas represent potential future enhancements and directions:
+*   **Expanded Brick Library:** Introducing more diverse learning methodologies as bricks (e.g., interactive coding exercises, complex simulations, collaborative peer review bricks, concept mapping tools).
+*   **Content Marketplace/Authoring Tools:** Developing capabilities for designated creators (or potentially users) to add new learning content or even define new brick templates.
+*   **Collaboration Features:** Enabling features for users to share their learning paths, study together, or engage in group discussions.
+*   **Advanced Learner Analytics:** Providing users with more detailed dashboards and insights into their learning patterns, strengths, weaknesses, and optimal study habits.
+*   **Gamification Elements:** Incorporating elements like points, badges, achievements, streaks (beyond leveling), or leaderboards to further enhance motivation and engagement.
+*   **Native Mobile Applications:** Developing dedicated native mobile applications for iOS and Android for an optimized on-the-go learning experience.
+*   **Integration with External Systems:** Exploring integrations with Learning Management Systems (LMS), external content providers, or other educational platforms.
+
+**7. Open Issues**
+The following points require further clarification or decision-making:
+*   **Initial Content Domains:** Which specific subject areas or domains (e.g., "Mathematics", "History", "Python Programming", "Spanish Language") will the platform support with content for the MVP launch?
+*   **Detailed Monetization Strategy:** Further details on the Freemium model specifics (e.g., exact limitations of the free tier, pricing for the Pro tier, feature differentiation) need to be defined.
+
+*** 
